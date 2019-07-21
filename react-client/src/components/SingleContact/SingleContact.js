@@ -1,6 +1,8 @@
 import React from 'react';
 import './SingleContact.scss';
 import {Container} from 'react-bootstrap';
+import PRO from '../../assets/professional.svg';
+import CITIZEN from '../../assets/citizen.svg'
 
 class SingleContact extends React.Component {
     constructor (props) {
@@ -10,6 +12,7 @@ class SingleContact extends React.Component {
         }
     }
     render () {
+        const SHAPE = this.props.driverType === 'Professional' ? PRO : CITIZEN;
         return (
             <Container 
                 className='single-contact'
@@ -20,7 +23,7 @@ class SingleContact extends React.Component {
                     <img alt='img' src={this.props.profile_image}/>
                     <div className='shape-container'>
                         <div className='shape-cropper'>
-                            <div className='shape'></div>
+                            <img alt='img' src={SHAPE} className='shape'/>
                         </div>
                     </div>
                 </div>
