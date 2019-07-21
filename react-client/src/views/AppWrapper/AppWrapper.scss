@@ -1,0 +1,29 @@
+#app-wrapper {
+    min-height: 100vh;
+    background-color: #f2f1f2;
+    #header {
+        background-color: #25b8ea;
+        color: #fff;
+        height: 7vh;
+        padding: 0 2% 0 2%;
+        #search-input {
+            input {
+                border-radius: 5px;
+                background-image: url('../../assets/search_icon.png');
+                background-repeat: no-repeat;
+                background-position: right;
+                object-fit: contain;
+                background-size: 25px;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #app-wrapper {
+        #header {
+            height: 8vh;
+            font-size: 0.8em;
+        }
+    }
+}
